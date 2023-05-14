@@ -32,6 +32,9 @@ android {
 }
 
 dependencies {
+    /*implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.appcompat:appcompat-v7:33.0.0'
+    implementation 'com.android.appcompat:design:33.0.0'*/
 
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.9.0'

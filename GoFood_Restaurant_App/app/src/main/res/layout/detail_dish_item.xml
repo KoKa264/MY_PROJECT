@@ -14,7 +14,7 @@
         <com.makeramen.roundedimageview.RoundedImageView
             android:layout_width="130dp"
             android:layout_height="120dp"
-            android:id="@+id/detail_img"
+            android:id="@+id/detail_image"
             android:layout_margin="10dp"
             android:src="@drawable/coffe"
             android:scaleType="centerCrop"
@@ -35,7 +35,7 @@
                 android:text="Name"
                 android:fontFamily="@font/croissant_one"
                 android:textColor="@color/black"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -67,12 +67,6 @@
                     android:text=" 5.0"
                     android:textStyle="bold" />
 
-                <!--ImageView
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="2dp"
-                    /-->
             </LinearLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -81,8 +75,8 @@
 
                 <ImageView
                     android:id="@+id/imageView4"
-                    android:layout_width="20dp"
-                    android:layout_height="19dp"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
                     android:src="@drawable/baseline_attach_money_24"
 
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -91,11 +85,11 @@
                     app:layout_constraintVertical_bias="0.517" />
 
                 <TextView
-                    android:id="@+id/detail_price"
+                    android:id="@+id/detail_prices"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="10 - 20"
-                    android:textSize="16sp"
+                    android:textSize="18sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"

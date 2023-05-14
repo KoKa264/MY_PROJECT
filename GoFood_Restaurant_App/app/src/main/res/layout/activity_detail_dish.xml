@@ -10,7 +10,7 @@
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBar"
         android:layout_width="match_parent"
-        android:layout_height="240dp"
+        android:layout_height="220dp"
         android:fitsSystemWindows="true">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
@@ -18,15 +18,14 @@
             android:layout_height="match_parent"
             android:fitsSystemWindows="true"
             app:contentScrim="?attr/colorPrimary"
-            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
-            app:title="Dish">
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">
             
             <ImageView
                 android:layout_width="match_parent"
                 android:id="@+id/detail_img"
-                android:layout_height="240dp"
+                android:layout_height="220dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/breakfast"/>
+                android:src="@drawable/egg2"/>
 
             <androidx.appcompat.widget.Toolbar
                 android:layout_width="match_parent"
@@ -53,15 +52,15 @@
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
         android:backgroundTint="@color/purple_500"
         android:baselineAlignBottom="false"
-        android:src="@drawable/baseline_shopping_cart_24"
-        app:fabSize="normal"
-        app:layout_anchorGravity="end|bottom"
-        android:tint="@null"
-        app:layout_anchor="@id/appBar"
-        android:layout_marginRight="20dp"
         android:clickable="true"
-        />
+        android:contentDescription="Add to cart"
+        android:src="@drawable/baseline_shopping_cart_24"
+        app:tint="@null"
+        app:fabSize="normal"
+        app:layout_anchor="@id/appBar"
+        app:layout_anchorGravity="end|bottom" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

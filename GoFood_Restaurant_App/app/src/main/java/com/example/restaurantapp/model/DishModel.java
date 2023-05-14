@@ -4,14 +4,15 @@ public class DishModel {
 
     int image;
     String name;
-    String type;
     String description;
+    String type;
 
-    public DishModel(int image, String name, String type, String description) {
+
+    public DishModel(int image, String name, String description, String type) {
         this.image = image;
         this.name = name;
-        this.type = type;
         this.description = description;
+        this.type = type;
     }
 
     public int getImage() {

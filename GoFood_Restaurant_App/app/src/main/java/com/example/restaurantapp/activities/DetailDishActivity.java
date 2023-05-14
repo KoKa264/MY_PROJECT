@@ -17,7 +17,7 @@ import java.util.List;
 public class DetailDishActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
-    List<DetailDishModel> detailDishModelsList;
+    List<DetailDishModel> detailDishModelList;
     DetailDishAdapter dishAdapter;
     ImageView imageView;
 
@@ -28,28 +28,40 @@ public class DetailDishActivity extends AppCompatActivity {
 
         String type = getIntent().getStringExtra("type");
 
-        recyclerView=findViewById(R.id.detail_rec);
-        imageView=findViewById(R.id.detail_img);
-
         recyclerView = findViewById(R.id.detail_rec);
+        imageView = findViewById(R.id.detail_img);
+
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        detailDishModelsList=new ArrayList<>();
-        dishAdapter=new DetailDishAdapter(detailDishModelsList);
+        detailDishModelList = new ArrayList<>();
+        dishAdapter = new DetailDishAdapter(detailDishModelList);
         recyclerView.setAdapter(dishAdapter);
 
         if(type != null && type.equalsIgnoreCase("breakfast")){
-            detailDishModelsList.add(new DetailDishModel(R.drawable.fav1,"Breakfast", "description","5.0","50"));
-            detailDishModelsList.add(new DetailDishModel(R.drawable.fav2,"Breakfast", "description","5.0","50"));
-            detailDishModelsList.add(new DetailDishModel(R.drawable.fav3,"Breakfast", "description","5.0","50"));
+
+            detailDishModelList.add(new DetailDishModel(R.drawable.fav1,"Fruit", "description","5.0","30"));
+            detailDishModelList.add(new DetailDishModel(R.drawable.fav2,"Hamburger", "description","5.0","50"));
+            detailDishModelList.add(new DetailDishModel(R.drawable.fav3,"Noodle", "description","5.0","40"));
+
+            dishAdapter.notifyDataSetChanged();
+        }
+
+        if(type != null && type.equalsIgnoreCase("lunch")){
+
+            detailDishModelList.add(new DetailDishModel(R.drawable.pizza1,"Cheese Pizza", "description","5.0","50"));
+            detailDishModelList.add(new DetailDishModel(R.drawable.pizza2,"Beef Pizza", "description","5.0","50"));
+            detailDishModelList.add(new DetailDishModel(R.drawable.pizza3,"Mixed Pizza", "description","5.0","50"));
 
             dishAdapter.notifyDataSetChanged();
         }
 
         if(type != null && type.equalsIgnoreCase("sweets")){
+
             imageView.setImageResource(R.drawable.sweets);
-            detailDishModelsList.add(new DetailDishModel(R.drawable.s1,"Breakfast", "description","5.0","50"));
-            detailDishModelsList.add(new DetailDishModel(R.drawable.s2,"Breakfast", "description","5.0","50"));
-            detailDishModelsList.add(new DetailDishModel(R.drawable.s3,"Breakfast", "description","5.0","50"));
+
+            detailDishModelList.add(new DetailDishModel(R.drawable.s1,"Candy", "description","5.0","20"));
+            detailDishModelList.add(new DetailDishModel(R.drawable.s2,"Donut", "description","5.0","35"));
+            detailDishModelList.add(new DetailDishModel(R.drawable.s3,"Strawberry Ice Cream", "description","5.0","10"));
+            detailDishModelList.add(new DetailDishModel(R.drawable.s4,"Sandwich Ice Cream", "description","5.0","10"));
 
             dishAdapter.notifyDataSetChanged();
         }

@@ -44,7 +44,7 @@ public class DishAdapter extends RecyclerView.Adapter<DishAdapter.ViewHolder> {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, DetailDishActivity.class);
-                intent.putExtra("type", list.get(position).getType());
+                intent.putExtra("type", list.get(holder.getAdapterPosition()).getType());
                 context.startActivity(intent);
             }
         });
@@ -52,6 +52,7 @@ public class DishAdapter extends RecyclerView.Adapter<DishAdapter.ViewHolder> {
 
     @Override
     public int getItemCount() {
+
         return list.size();
     }
 

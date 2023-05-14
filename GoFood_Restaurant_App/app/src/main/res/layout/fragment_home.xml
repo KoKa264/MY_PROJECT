@@ -23,7 +23,7 @@
             android:hint="@string/search"
             android:textColorHint="@color/white"
             android:textColor="@color/white"
-            android:padding="10dp"
+            android:padding="11dp"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.495"

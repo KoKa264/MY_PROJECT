@@ -19,13 +19,14 @@ public class DetailDishAdapter extends RecyclerView.Adapter<DetailDishAdapter.Vi
     List<DetailDishModel> list;
 
     public DetailDishAdapter(List<DetailDishModel> list) {
+
         this.list = list;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.detail_dish_item,parent));
+        return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.detail_dish_item,parent,false));
     }
 
     @Override
@@ -40,6 +41,7 @@ public class DetailDishAdapter extends RecyclerView.Adapter<DetailDishAdapter.Vi
 
     @Override
     public int getItemCount() {
+
         return list.size();
     }
 
@@ -49,11 +51,12 @@ public class DetailDishAdapter extends RecyclerView.Adapter<DetailDishAdapter.Vi
         TextView name, price, description, rating;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            imageView=itemView.findViewById(R.id.detail_img);
-            name=name.findViewById(R.id.detail_name);
-            price=price.findViewById(R.id.detail_price);
-            description=description.findViewById(R.id.detail_des);
-            rating=rating.findViewById(R.id.detail_rating);
+
+            imageView=itemView.findViewById(R.id.detail_image);
+            name=itemView.findViewById(R.id.detail_name);
+            price=itemView.findViewById(R.id.detail_prices);
+            description=itemView.findViewById(R.id.detail_des);
+            rating=itemView.findViewById(R.id.detail_rating);
 
         }
     }

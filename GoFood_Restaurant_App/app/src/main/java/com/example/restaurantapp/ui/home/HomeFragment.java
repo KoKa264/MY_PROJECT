@@ -60,9 +60,9 @@ public class HomeFragment extends Fragment implements UpdateVerRec {
         //vertical - dọc
         homeVerModelList = new ArrayList<>();
 
-        /*homeVerModelList.add(new HomeVerModel(R.drawable.pizza1, "Cheese Pizza", "5.0", "$10-$50" ));
-        homeVerModelList.add(new HomeVerModel(R.drawable.pizza2, "Hot Dogs Pizza", "5.0", "$7-$20" ));
-        homeVerModelList.add(new HomeVerModel(R.drawable.pizza3, "Mixed Pizza", "5.0", "$30-$70" ));
+        /*homeVerModelList.add(new HomeVerModel(R.drawable.pizza1, "Cheese Pizza", "5.0", "$10 - $50" ));
+        homeVerModelList.add(new HomeVerModel(R.drawable.pizza2, "Hot Dogs Pizza", "5.0", "$7 - $20" ));
+        homeVerModelList.add(new HomeVerModel(R.drawable.pizza3, "Mixed Pizza", "5.0", "$30 - $70" ));
         */
 
         homeVerAdapter=new HomeVerAdapter(getActivity(),homeVerModelList);
